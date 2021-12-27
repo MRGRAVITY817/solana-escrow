@@ -1,0 +1,21 @@
+[package]
+edition = "2021"
+license = "MIT"
+name = "solana-escrow-program"
+publish = false
+version = "0.1.0"
+
+[dependencies]
+arrayref = "0.3.6"
+solana-program = "=1.9.1"
+spl-token = {version = "3.2.0", features = ["no-entrypoint"]}
+thiserror = "1.0.30"
+
+[features]
+test-bpf = []
+
+[dev-dependencies]
+solana-program-test = "=1.9.1"
+
+[lib]
+crate-type = ["cdylib", "lib"]
